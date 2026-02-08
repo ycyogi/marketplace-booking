@@ -26,6 +26,7 @@
     "@nestjs/passport": "^11.0.5",
     "@nestjs/platform-express": "^11.0.1",
     "@nestjs/platform-fastify": "^11.1.13",
+    "@nestjs/swagger": "^11.2.0",
     "ioredis": "^5.9.2",
     "jwks-rsa": "^3.2.2",
     "kysely": "^0.28.11",
