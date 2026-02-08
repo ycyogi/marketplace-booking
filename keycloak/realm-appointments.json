@@ -37,6 +37,7 @@
       "firstName": "Owner",
       "lastName": "Demo",
       "email": "owner@demo-salon.local",
+      "createdTimestamp": 1700000000000,
       "enabled": true,
       "emailVerified": true,
       "credentials": [
@@ -53,6 +54,7 @@
       "firstName": "Staff",
       "lastName": "Demo",
       "email": "staff@demo-salon.local",
+      "createdTimestamp": 1700000000000,
       "enabled": true,
       "emailVerified": true,
       "credentials": [
