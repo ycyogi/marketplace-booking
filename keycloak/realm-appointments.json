@@ -34,6 +34,8 @@
     {
       "id": "22222222-2222-2222-2222-222222222222",
       "username": "owner@demo-salon.local",
+      "firstName": "Owner",
+      "lastName": "Demo",
       "email": "owner@demo-salon.local",
       "enabled": true,
       "emailVerified": true,
@@ -48,6 +50,8 @@
     {
       "id": "33333333-3333-3333-3333-333333333333",
       "username": "staff@demo-salon.local",
+      "firstName": "Staff",
+      "lastName": "Demo",
       "email": "staff@demo-salon.local",
       "enabled": true,
       "emailVerified": true,
