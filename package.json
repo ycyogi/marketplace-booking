@@ -1,0 +1,27 @@
+{
+  "name": "marketplace-booking",
+  "private": true,
+  "packageManager": "pnpm@9.15.9",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "pnpm -r dev",
+    "build": "pnpm -r build",
+    "lint": "pnpm -r lint",
+    "test": "pnpm -r test",
+    "infra:up": "docker compose up -d",
+    "infra:down": "docker compose down",
+    "infra:logs": "docker compose logs -f --tail=200",
+    "db:migrate": "pnpm --filter @mb/db migrate:up",
+    "db:status": "pnpm --filter @mb/db migrate:status",
+    "db:create": "pnpm --filter @mb/db migrate:create"
+  },
+  "devDependencies": {
+    "eslint": "^10.0.0",
+    "prettier": "^3.8.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}

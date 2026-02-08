@@ -1,0 +1,20 @@
+{
+  "name": "@mb/db",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "migrate:up": "dotenv -e ../../.env -- node-pg-migrate up",
+    "migrate:down": "dotenv -e ../../.env -- node-pg-migrate down",
+    "migrate:create": "dotenv -e ../../.env -- node-pg-migrate create",
+    "migrate:status": "dotenv -e ../../.env -- node-pg-migrate up --dry-run"
+  },
+  "dependencies": {
+    "dotenv": "^16.6.1",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "dotenv-cli": "^11.0.0",
+    "node-pg-migrate": "^8.0.4",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,3 @@
+{
+  "config": "node-pg-migrate.config.cjs"
+}
