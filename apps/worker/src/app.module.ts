@@ -8,6 +8,7 @@ import { ExpireHoldsService } from './expire-holds.service';
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
+      envFilePath: ['.env', '../../.env'],
       load: [
         () => ({
           databaseUrl: process.env.DATABASE_URL,
