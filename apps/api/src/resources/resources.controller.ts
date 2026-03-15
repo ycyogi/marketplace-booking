@@ -1,4 +1,5 @@
 import { Body, Controller, Get, Post, UseGuards } from '@nestjs/common';
+import { ApiBearerAuth, ApiHeader, ApiTags } from '@nestjs/swagger';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 import { Ctx } from '../tenancy/ctx.decorator';
 import { Roles } from '../tenancy/roles.decorator';
@@ -7,6 +8,9 @@ import { TenantGuard } from '../tenancy/tenant.guard';
 import type { RequestContext } from '../tenancy/tenancy.types';
 import { ResourcesService } from './resources.service';
 
+@ApiTags('resources')
+@ApiBearerAuth()
+@ApiHeader({ name: 'X-Tenant-Id', required: true, description: 'Tenant UUID' })
 @UseGuards(JwtAuthGuard, TenantGuard, RolesGuard)
 @Controller('resources')
 export class ResourcesController {

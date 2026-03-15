@@ -7,6 +7,7 @@ import {
   Query,
   UseGuards,
 } from '@nestjs/common';
+import { ApiBearerAuth, ApiHeader, ApiTags } from '@nestjs/swagger';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 import { Ctx } from '../tenancy/ctx.decorator';
 import { Roles } from '../tenancy/roles.decorator';
@@ -15,6 +16,9 @@ import { TenantGuard } from '../tenancy/tenant.guard';
 import type { RequestContext } from '../tenancy/tenancy.types';
 import { BookingsService } from './bookings.service';
 
+@ApiTags('bookings')
+@ApiBearerAuth()
+@ApiHeader({ name: 'X-Tenant-Id', required: true, description: 'Tenant UUID' })
 @UseGuards(JwtAuthGuard, TenantGuard, RolesGuard)
 @Controller('bookings')
 export class BookingsController {
